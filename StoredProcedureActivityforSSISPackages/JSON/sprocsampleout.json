@@ -1,0 +1,15 @@
+{
+    "name": "sprocsampleout",
+    "properties": {
+        "published": false,
+        "type": "SqlServerTable",
+        "linkedServiceName": "SqlServerLinkedService",
+        "typeProperties": {
+            "tableName": "ADFIntegrationTable"
+        },
+        "availability": {
+            "frequency": "Day",
+            "interval": 1
+        }
+    }
+}

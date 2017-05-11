@@ -1,0 +1,37 @@
+{
+    "name": "SprocActivityPipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "SqlServerStoredProcedure",
+                "typeProperties": {
+                    "storedProcedureName": "USP_ExecuteSSISPackage",
+                    "storedProcedureParameters": {
+                        "package_name": "PackageName.dtsx",
+                        "folder_name": "Folder",
+                        "project_name": "Project"
+                    }
+                },
+                "outputs": [
+                    {
+                        "name": "sprocsampleout"
+                    }
+                ],
+                "policy": {
+                    "timeout": "01:00:00",
+                    "concurrency": 1, 
+                    "retry":0
+                },
+                "scheduler": {
+                    "frequency": "Day",
+                    "interval": 1
+                },
+                "name": "SprocActivity"
+            }
+        ],
+        "start": "2017-04-02T00:00:00Z",
+        "end": "2017-04-02T05:00:00Z",
+        "isPaused": false,       
+        "pipelineMode": "Scheduled"
+    }
+}

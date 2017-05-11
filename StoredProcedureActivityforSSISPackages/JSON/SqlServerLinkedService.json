@@ -1,0 +1,13 @@
+{
+    "name": "SqlServerLinkedService",
+    "properties": {
+        "description": "",        
+        "type": "OnPremisesSqlServer",
+        "typeProperties": {
+            "connectionString": "data source=<SQL Server name>;initial catalog=<database name>;integrated security=True;EncryptedCredential=<...>",
+            "gatewayName": "<GatewayName>",
+            "userName": null,
+            "password": null
+        }
+    }
+}
