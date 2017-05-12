@@ -11,3 +11,5 @@ To use the sample:
                         "project_name": "ProjectName"
                     }
 4. The stored procedure runs SSIS package in synchronized mode, it completes only when the package execution completes. If you have a long duration package, update the timeout value to make sure it does not timeout the stored procedure. If the SSIS package completes successfully, the Stored Procedure Activity completes successful. If package fails, the stored procedure execution fails with error message reported to portal and an execution ID for user to track detail in SSIS catalog database. 
+
+    ![error sample](.\readme.png)
