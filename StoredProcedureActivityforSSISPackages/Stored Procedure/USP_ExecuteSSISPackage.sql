@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
 -- Author:		shengc
--- Create date: 5/11/2017
+-- Create date:	5/11/2017
 -- Description:	The sample stored procedure to call SSIS package in Synchronized mode and return failure if the package execution fails. 
 -- =============================================
 CREATE PROCEDURE USP_ExecuteSSISPackage 
