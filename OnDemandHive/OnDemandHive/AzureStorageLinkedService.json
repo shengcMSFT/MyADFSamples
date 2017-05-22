@@ -1,0 +1,11 @@
+﻿{
+    "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json",
+    "name": "AzureStorageLinkedService",
+    "properties": {
+        "type": "AzureStorage",
+      "typeProperties": {
+        "connectionString": "DefaultEndpointsProtocol=https;AccountName=shengcstor2;AccountKey=YBzmllWKi/HCnZrEOFPm6u2G+TYssbDYLbWhb7xvha2X+wBsQUFSfOI7TARqvPhJGQArDsu5wTlHaUUIBrSlYg=="
+      }
+        
+    }
+}
