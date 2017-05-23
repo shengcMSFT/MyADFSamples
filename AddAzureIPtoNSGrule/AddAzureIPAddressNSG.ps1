@@ -70,7 +70,7 @@ ForEach ($subnet in $ipRange.Subnet) {
     $rules += 
         New-AzureRmNetworkSecurityRuleConfig `
             -Name $ruleName `
-            -Description "Allow outbound to Azure $subnet" `
+            -Description "Allow inbound 443 to Azure $subnet" `
             -Protocol * `
             -SourcePortRange * `
             -DestinationPortRange "443" `
