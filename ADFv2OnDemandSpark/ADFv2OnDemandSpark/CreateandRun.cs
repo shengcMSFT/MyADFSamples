@@ -71,6 +71,7 @@ namespace ADFv2OnDemandSpark
             client.LinkedServices.CreateOrUpdate(resourceGroup, dataFactoryName, storageLinkedServiceName, storageLinkedService);
             Console.WriteLine(SafeJsonConvert.SerializeObject(storageLinkedService, client.SerializationSettings));
 
+            // Create an On-Demand HDInsight linked service
             Console.WriteLine("Creating linked service " + sparkLinkedServiceName + "...");
 
             LinkedServiceResource sparkLinkedService = new LinkedServiceResource(
@@ -93,7 +94,7 @@ namespace ADFv2OnDemandSpark
             Console.WriteLine(SafeJsonConvert.SerializeObject(sparkLinkedService, client.SerializationSettings));
 
 
-            // Create a pipeline with copy activity
+            // Create a pipeline with Spark activity
             Console.WriteLine("Creating pipeline " + pipelineName + "...");
             PipelineResource pipeline = new PipelineResource
             {
