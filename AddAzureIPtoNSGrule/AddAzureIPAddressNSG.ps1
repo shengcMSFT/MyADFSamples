@@ -67,18 +67,33 @@ ForEach ($subnet in $ipRange.Subnet) {
 
     $ruleName = "hdirule" + $subnet.Replace("/","-")
     
+    #$rules += 
+    #    New-AzureRmNetworkSecurityRuleConfig `
+    #        -Name $ruleName `
+    #        -Description "Allow inbound 443 to Azure $subnet" `
+    #        -Protocol * `
+    #        -SourcePortRange * `
+    #        -DestinationPortRange "443" `
+    #        -SourceAddressPrefix "$subnet" `
+    #        -DestinationAddressPrefix VirtualNetwork `
+    #        -Access Allow `
+    #        -Priority $rulePriority `
+    #        -Direction Inbound        
+
     $rules += 
         New-AzureRmNetworkSecurityRuleConfig `
             -Name $ruleName `
-            -Description "Allow inbound 443 to Azure $subnet" `
+            -Description "Allow outbound 1433 to Azure $subnet" `
             -Protocol * `
             -SourcePortRange * `
-            -DestinationPortRange "443" `
+            -DestinationPortRange "1433" `
             -SourceAddressPrefix "$subnet" `
             -DestinationAddressPrefix VirtualNetwork `
             -Access Allow `
             -Priority $rulePriority `
-            -Direction Inbound        
+            -Direction Outbound        
+
+    
             
     $rulePriority++
 
@@ -91,7 +106,7 @@ $location = "westus"
 
 # Create Network Security Group
 
-$nsgName = "VNetHDI-nsg"
+$nsgName = "shengc-nsg1"
 
 $nsg = 
     New-AzureRmNetworkSecurityGroup `
