@@ -10,7 +10,7 @@
                     "type": "LinkedServiceReference"
                 },
                 "typeProperties": {
-                    "command": "v2Sample.exe",
+                    "command": "Listall.exe",
                     "resourceLinkedService": {
                         "referenceName": "BatchStorageLinkedService",
                         "type": "LinkedServiceReference"
