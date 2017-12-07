@@ -18,7 +18,7 @@ Set-AzureRmDataFactoryV2LinkedService -ResourceGroupName $resourceGroupName -Dat
 
 Set-AzureRmDataFactoryV2LinkedService -ResourceGroupName $resourceGroupName -DataFactoryName $dataFactoryName -Name "AzureBatchLinkedService" -File "AzureBatchLinkedService.json"
 
-set-AzureRmDataFactoryV2Pipeline -ResourceGroupName $resourceGroupName -DataFactoryName $dataFactoryName -Name $pipelineName -File "C:\Users\shengc\OneDrive - Microsoft\IM_PM\ScriptsRepo\customActivityV2\V1writteninV2style\MyCustomActivityPipeline_3.json"
+set-AzureRmDataFactoryV2Pipeline -ResourceGroupName $resourceGroupName -DataFactoryName $dataFactoryName -Name $pipelineName -File "MyCustomActivityPipeline.json"
 
 # Run pipeline and monitor output
 $runId = Invoke-AzureRmDataFactoryV2Pipeline -DataFactoryName $dataFactoryName -ResourceGroupName $resourceGroupName -PipelineName $pipelineName
